@@ -1,67 +1,58 @@
 #include <iostream>
 #include <cstdlib>
 
-#include "converFuncs.cpp"
-#include "converFuncs.h"
+int footInchCon();
+int metricCal();
 
 
 using namespace std;
 
-int footInchCon();
-int stonePoundCon();
-int conversion();
-int main();
-
-//Main loop
 int main()
 {
-                    
-    int choice;
-    int choiceTwo;
+    string choice;
+    int i;
+    int m;
     
     
     cout << "This program will find the BMI from the values given \n";
     cout << "\n";
-    cout << "This program will accept values in (1)imperial (ft & in or stone & lb) and (2)metric (m & kg) \n";
+    cout << "This program will accept values in (i)mperial (ft & in or stone & lb) and (m)etric (m & kg) \n";
+    cout << "\n";
            
     cout << "Please enter your choice \n";
     
     cin >> choice;
     
-    if (choice == 1)
+   
+    if (choice == "i")
     {
-        cout << "1)Foot and inchs or 2)stone and pounds \n";
-        cout << "please enter a number; 1 or 2 \n";
+        cout << "You have chosen the imperial unit... \n";
+        cout << "This uses the units foot and inches for height and stone and pounds for weight \n";
+        cout << "You will be asked for the height measurements first and then the weight\n";
+        cout << "\n";
         
-        cin >> choiceTwo;
+        footInchCon();
+    }
+
+    
+    if (choice == "m")
+    {
+        cout << "You have chosen the metric unit... \n";
+        cout << "This uses the units metres for height and kilograms for weight \n";
+        cout << "You will be asked for the height measurements first\n";
+        cout << "\n";
         
-        if (choiceTwo == 1)
-        {
-            footInchCon();
-        }
-        
-        if (choiceTwo == 2)
-        {
-            stonePoundCon();
-        }
-        
-        else if (choiceTwo != 1, 2)
-        {
-            cout << "Please enter a valid integer \n";
-            cout << "\n";
-            main();
-        };
+        metricCal();
     }
     
-    if (choice == 2)
-        {
-            conversion();
-        }
-    else if (choice != 1, 2)
-        {
-            cout << "Please enter a valid integer \n";
-            main();
-        };
-
-    return 0;        
+    else if (choice != "i", "m")
+    {
+        cout << "Please enter a valid choice! \n";
+        cout << "\n";
+        
+        main();
+        
+    };
+    
+    return 0;
 };

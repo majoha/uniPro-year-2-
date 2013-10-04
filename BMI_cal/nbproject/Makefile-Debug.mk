@@ -35,8 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/converFuncs.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/bmiCal.o \
+	${OBJECTDIR}/imperialCon.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/metricCalulation.o
 
 
 # C Compiler Flags
@@ -63,15 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bmi_cal.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bmi_cal ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/converFuncs.o: converFuncs.cpp 
+${OBJECTDIR}/bmiCal.o: bmiCal.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/converFuncs.o converFuncs.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/bmiCal.o bmiCal.cpp
+
+${OBJECTDIR}/imperialCon.o: imperialCon.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/imperialCon.o imperialCon.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/metricCalulation.o: metricCalulation.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/metricCalulation.o metricCalulation.cpp
 
 # Subprojects
 .build-subprojects:

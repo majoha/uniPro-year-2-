@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>converFuncs.h</itemPath>
+      <itemPath>bmiHeader.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +13,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>converFuncs.cpp</itemPath>
+      <itemPath>bmiCal.cpp</itemPath>
+      <itemPath>imperialCon.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>metricCalulation.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -39,11 +41,15 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="converFuncs.cpp" ex="false" tool="1" flavor2="0">
+      <item path="bmiCal.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="converFuncs.h" ex="false" tool="3" flavor2="0">
+      <item path="bmiHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imperialCon.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="metricCalulation.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -67,11 +73,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="converFuncs.cpp" ex="false" tool="1" flavor2="0">
+      <item path="bmiCal.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="converFuncs.h" ex="false" tool="3" flavor2="0">
+      <item path="bmiHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imperialCon.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="metricCalulation.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
