@@ -10,8 +10,8 @@ using namespace std;
 int main()
 {
     string choice;
-    int i = 0;
-    int m = 0;
+    int i;
+    int m;
     
     
     cout << "This program will find the BMI from the values given \n";
